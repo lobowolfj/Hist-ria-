@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raízes | Folclore Brasileiro</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap');
+
+
+        /* =========================
+           CORES
+        ========================= */
+
+        :root {
+            --verde: #193b2b;
+            --verde-claro: #315b43;
+            --creme: #f3efe3;
+            --branco: #faf9f4;
+            --terracota: #a84f35;
+            --amarelo: #c39a42;
+            --texto: #292923;
+            --cinza: #6d6b62;
+            --linha: #d8d2c3;
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--creme);
+            color: var(--texto);
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.7;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        header {
+            background: var(--branco);
+            border-bottom: 1px solid var(--linha);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu {
+            max-width: 1180px;
+            margin: auto;
+            min-height: 72px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .marca {
+            text-decoration: none;
+            color: var(--verde);
+            font-family: "Libre Baskerville", serif;
+            font-size: 20px;
+        }
+
+        .marca span {
+            color: var(--terracota);
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--texto);
+            font-size: 12px;
+            padding: 10px;
+            transition: .2s;
+        }
+
+        .menu a:hover {
+            color: var(--terracota);
+        }
+
+
+        /* =========================
+           CAPA
+        ========================= */
+
+        .hero {
+            background: var(--verde);
+
+            min-height: 650px;
+
+            display: grid;
+            grid-template-columns: 45% 55%;
+        }
+
+        .hero-texto {
+            padding: 100px 9%;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            color: white;
+        }
+
+        .linha-pequena {
+            width: 45px;
+            height: 3px;
+            background: var(--terracota);
+            margin-bottom: 28px;
+        }
+
+        .hero-texto small {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #d8c27c;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: "Libre Baskerville", serif;
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-weight: 400;
+            line-height: 1;
+            margin: 20px 0 30px;
+        }
+
+        .hero h1 span {
+            color: #d7bd6a;
+        }
+
+        .hero-texto p {
+            max-width: 480px;
+            color: #d9e0da;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FOTO DA CAPA (ANIMAÇÃO FLORESTA)
+        ========================= */
+
+        .hero-imagem {
+            min-height: 650px;
+            overflow: hidden;
+            background: #244c36;
+            position: relative;
+        }
+
+        .hero-imagem img {
+            width: 100%;
+            height: 100%;
+            min-height: 650px;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0; 
+            animation: passa-floresta 16s infinite;
+        }
+
+        .hero-imagem img:nth-child(1) { animation-delay: 0s; }
+        .hero-imagem img:nth-child(2) { animation-delay: 4s; }
+        .hero-imagem img:nth-child(3) { animation-delay: 8s; }
+        .hero-imagem img:nth-child(4) { animation-delay: 12s; }
+
+        @keyframes passa-floresta {
+            0%, 20% { opacity: 1; }
+            25%, 95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: min(1100px, 88%);
+            margin: auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+
+        /* =========================
+           TÍTULOS
+        ========================= */
+
+        .cabecalho-secao {
+            margin-bottom: 55px;
+            max-width: 700px;
+        }
+
+        .cabecalho-secao small {
+            color: var(--terracota);
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .cabecalho-secao h2 {
+            font-family: "Libre Baskerville", serif;
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            font-weight: 400;
+            color: var(--verde);
+            line-height: 1.15;
+            margin: 10px 0 15px;
+        }
+
+        .cabecalho-secao p {
+            color: var(--cinza);
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           INTRODUÇÃO (ANIMAÇÃO CULTURA)
+        ========================= */
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .intro-texto p {
+            color: #55554e;
+            margin-bottom: 20px;
+        }
+
+        .imagem {
+            min-height: 420px;
+            background: #d7d2c3;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imagem img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: passa-cultura 12s infinite; 
+        }
+
+        .imagem img:nth-child(1) { animation-delay: 0s; }
+        .imagem img:nth-child(2) { animation-delay: 4s; }
+        .imagem img:nth-child(3) { animation-delay: 8s; }
+
+        @keyframes passa-cultura {
+            0%, 25% { opacity: 1; }
+            33%, 92% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+        /* =========================
+           FAIXA VERDE
+        ========================= */
+
+        .faixa {
+            background: var(--verde);
+            color: white;
+        }
+
+        .faixa .cabecalho-secao h2 {
+            color: white;
+        }
+
+        .faixa .cabecalho-secao p {
+            color: #d6ded8;
+        }
+
+
+        /* =========================
+           ADIVINHAÇÕES
+        ========================= */
+
+        .adivinhacoes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top: 1px solid rgba(255,255,255,.2);
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+
+        .adivinhacao {
+            padding: 40px 30px;
+            border-right: 1px solid rgba(255,255,255,.2);
+        }
+
+        .adivinhacao:last-child {
+            border-right: none;
+        }
+
+        .adivinhacao-numero {
+            color: #d6bd6c;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .adivinhacao h3 {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .adivinhacao p {
+            color: #d4ddd6;
+        }
+
+        .adivinhacao button {
+            margin-top: 25px;
+
+            border: 1px solid #c7a653;
+            background: transparent;
+            color: #d8c27b;
+
+            padding: 9px 15px;
+
+            cursor: pointer;
+            font-family: inherit;
+
+            transition: .2s;
+        }
+
+        .adivinhacao button:hover {
+            background: #c7a653;
+            color: var(--verde);
+        }
+
+        .resposta {
+            display: none;
+            color: #d8c27b;
+            margin-top: 18px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           TRAVA-LÍNGUAS
+        ========================= */
+
+        .lista {
+            border-top: 1px solid var(--linha);
+        }
+
+        .item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--linha);
+        }
+
+        .item-numero {
+            color: var(--terracota);
+
+            font-family: "Libre Baskerville", serif;
+
+            font-size: 25px;
+        }
+
+        .item h3 {
+            color: var(--verde);
+
+            font-family: "Libre Baskerville", serif;
+
+            font-size: 23px;
+
+            font-weight: 400;
+
+            margin-bottom: 7px;
+        }
+
+        .item p {
+            color: var(--cinza);
+        }
+
+
+        /* =========================
+           DITADOS
+        ========================= */
+
+        .ditados {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .ditado {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.2);
+        }
+
+        .ditado-numero {
+            font-family: "Libre Baskerville", serif;
+
+            font-size: 28px;
+
+            color: #d3b763;
+        }
+
+        .ditado h3 {
+            font-family: "Libre Baskerville", serif;
+
+            font-weight: 400;
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+        .ditado p {
+            color: #d4ddd6;
+            max-width: 700px;
+        }
+
+
+        /* =========================
+           PARLENDAS
+        ========================= */
+
+        .parlendas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .parlenda {
+            background: var(--branco);
+
+            border: 1px solid var(--linha);
+
+            padding: 45px;
+        }
+
+        .parlenda small {
+            color: var(--terracota);
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+        }
+
+        .parlenda h3 {
+            color: var(--verde);
+
+            font-family: "Libre Baskerville", serif;
+
+            font-weight: 400;
+
+            font-size: 28px;
+
+            margin: 10px 0 20px;
+        }
+
+        .parlenda p {
+            color: var(--cinza);
+            font-style: italic;
+        }
+
+
+        /* =========================
+           SIMPATIAS E SUPERSTIÇÕES
+        ========================= */
+
+        .materia {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            margin-bottom: 60px;
+        }
+
+        .materia-imagem {
+            min-height: 400px;
+
+            background: var(--verde-claro);
+
+            overflow: hidden;
+        }
+
+        .materia-imagem img {
+            width: 100%;
+            height: 400px;
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .materia-texto {
+            background: var(--branco);
+
+            padding: 60px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            border: 1px solid var(--linha);
+        }
+
+        .materia-texto small {
+            color: var(--terracota);
+
+            letter-spacing: 2px;
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+        .materia-texto h3 {
+            font-family: "Libre Baskerville", serif;
+
+            color: var(--verde);
+
+            font-weight: 400;
+
+            font-size: 35px;
+
+            line-height: 1.2;
+
+            margin: 12px 0 20px;
+        }
+
+        .materia-texto p {
+            color: var(--cinza);
+        }
+
+
+        /* =========================
+           CANTIGAS
+        ========================= */
+
+        .cantigas {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 35px;
+        }
+
+        .cantiga {
+            background: #234936;
+
+            color: white;
+
+            padding: 45px;
+
+            border-left: 4px solid #c39a42;
+        }
+
+        .cantiga h3 {
+            font-family: "Libre Baskerville", serif;
+
+            font-weight: 400;
+
+            color: #d7bd6a;
+
+            font-size: 28px;
+
+            margin-bottom: 20px;
+        }
+
+        .cantiga p {
+            color: #d7dfd9;
+
+            font-style: italic;
+        }
+
+
+        /* =========================
+           CONCLUSÃO
+        ========================= */
+
+        .conclusao {
+            background: var(--verde);
+
+            color: white;
+
+            padding: 90px 10%;
+
+            text-align: center;
+        }
+
+        .conclusao h2 {
+            font-family: "Libre Baskerville", serif;
+
+            font-weight: 400;
+
+            font-size: clamp(2.5rem, 5vw, 4rem);
+
+            margin-bottom: 30px;
+        }
+
+        .conclusao p {
+            max-width: 750px;
+
+            margin: 0 auto 20px;
+
+            color: #d7dfd9;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: #10291e;
+
+            color: #aab8ae;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            font-size: 11px;
+        }
+
+        footer strong {
+            color: #d3b763;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media(max-width: 800px) {
+
+            .menu {
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .menu ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-texto {
+                padding: 80px 8%;
+            }
+
+            .hero-imagem {
+                min-height: 450px;
+            }
+
+            .hero-imagem img {
+                min-height: 450px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+            }
+
+            .adivinhacoes {
+                grid-template-columns: 1fr;
+            }
+
+            .adivinhacao {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.2);
+            }
+
+            .parlendas {
+                grid-template-columns: 1fr;
+            }
+
+            .materia {
+                grid-template-columns: 1fr;
+            }
+
+            .cantigas {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width: 500px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .item {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .ditado {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .materia-texto {
+                padding: 40px 30px;
+            }
+
+            .materia-texto h3 {
+                font-size: 28px;
+            }
+
+            .parlenda {
+                padding: 35px 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+
+
+    <!-- =========================
+         CAPA
+    ========================= -->
+
+    <main id="inicio">
+
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <div class="linha-pequena"></div>
+
+                <small>
+                    Cultura popular brasileira
+                </small>
+
+                <h1>
+                    Folclore<br>
+                    <span>Brasileiro</span>
+                </h1>
+
+                <p>
+                    Histórias, brincadeiras, crenças,
+                    músicas e costumes que atravessam
+                    gerações e ajudam a contar a história
+                    do nosso povo.
+                </p>
+
+            </div>
+
+            <div class="hero-imagem">
+                <img src="slides/floresta.jpg" alt="Floresta">
+                <img src="slides/mar.jpg" alt="Mar">
+                <img src="slides/florestamar.png" alt="Floresta e mar">
+                <img src="slides/passaros.jpg" alt="Pássaros">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRODUÇÃO
+        ========================= -->
+
+        <section id="introducao">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        01 — Introdução
+                    </small>
+
+                    <h2>
+                        Uma cultura feita de muitas vozes
+                    </h2>
+
+                    <p>
+                        O folclore faz parte da memória
+                        e do cotidiano de diferentes
+                        comunidades brasileiras.
+                    </p>
+
+                </div>
+
+
+                <div class="intro">
+
+                    <div class="intro-texto">
+
+                        <p>
+                            O folclore brasileiro é formado
+                            por diversas manifestações da
+                            cultura popular, como lendas,
+                            músicas, danças, festas,
+                            brincadeiras, crenças,
+                            costumes e histórias.
+                        </p>
+
+                        <p>
+                            Essas manifestações foram
+                            construídas ao longo do tempo
+                            e receberam influências de
+                            diferentes povos, especialmente
+                            indígenas, africanos e europeus.
+                        </p>
+
+                        <p>
+                            Por isso, estudar o folclore
+                            significa também conhecer um
+                            pouco da diversidade cultural
+                            existente no Brasil.
+                        </p>
+
+                    </div>
+
+                    <div class="imagem">
+                        <img src="slides/capoeira.jpeg" alt="Roda de Capoeira">
+                        <img src="slides/bonecos.png" alt="Bonecos">
+                        <img src="slides/boi.jpg" alt="Bumba meu boi">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ADIVINHAÇÕES
+        ========================= -->
+
+        <section
+            class="faixa"
+            id="adivinhacoes"
+        >
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        02 — Brincadeiras
+                    </small>
+
+                    <h2>
+                        Adivinhações
+                    </h2>
+
+                    <p>
+                        Tente descobrir a resposta
+                        antes de revelá-la.
+                    </p>
+
+                </div>
+
+
+                <div class="adivinhacoes">
+
+
+                    <article class="adivinhacao">
+
+                        <span class="adivinhacao-numero">
+                            01
+                        </span>
+
+                        <h3>
+                            O que é, o que é?
+                        </h3>
+
+                        <p>
+                            Cai em pé e corre deitado?
+                        </p>
+
+                        <button onclick="resposta(1)">
+                            revelar
+                        </button>
+
+                        <div
+                            class="resposta"
+                            id="resposta1"
+                        >
+                            A chuva.
+                        </div>
+
+                    </article>
+
+
+                    <article class="adivinhacao">
+
+                        <span class="adivinhacao-numero">
+                            02
+                        </span>
+
+                        <h3>
+                            O que é, o que é?
+                        </h3>
+
+                        <p>
+                            Tem dentes, mas não morde?
+                        </p>
+
+                        <button onclick="resposta(2)">
+                            revelar
+                        </button>
+
+                        <div
+                            class="resposta"
+                            id="resposta2"
+                        >
+                            O pente.
+                        </div>
+
+                    </article>
+
+
+                    <article class="adivinhacao">
+
+                        <span class="adivinhacao-numero">
+                            03
+                        </span>
+
+                        <h3>
+                            O que é, o que é?
+                        </h3>
+
+                        <p>
+                            Quanto mais se tira,
+                            maior fica?
+                        </p>
+
+                        <button onclick="resposta(3)">
+                            revelar
+                        </button>
+
+                        <div
+                            class="resposta"
+                            id="resposta3"
+                        >
+                            O buraco.
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRAVA-LÍNGUAS
+        ========================= -->
+
+        <section id="trava-linguas">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        03 — Cultura oral
+                    </small>
+
+                    <h2>
+                        Trava-línguas
+                    </h2>
+
+                    <p>
+                        Brincadeiras com palavras,
+                        sons e repetições.
+                    </p>
+
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item">
+
+                        <div class="item-numero">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                O rato
+                            </h3>
+
+                            <p>
+                                O rato roeu a roupa
+                                do rei de Roma.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <div class="item-numero">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Os tigres
+                            </h3>
+
+                            <p>
+                                Três pratos de trigo
+                                para três tigres tristes.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <div class="item-numero">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                O peito de Pedro
+                            </h3>
+
+                            <p>
+                                O peito do pé de Pedro
+                                é preto.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DITADOS
+        ========================= -->
+
+        <section
+            class="faixa"
+            id="ditados"
+        >
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        04 — Sabedoria popular
+                    </small>
+
+                    <h2>
+                        Ditados populares
+                    </h2>
+
+                    <p>
+                        Frases transmitidas de geração
+                        em geração que carregam
+                        ensinamentos do cotidiano.
+                    </p>
+
+                </div>
+
+
+                <div class="ditados">
+
+
+                    <article class="ditado">
+
+                        <div class="ditado-numero">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Água mole em pedra dura,
+                                tanto bate até que fura.
+                            </h3>
+
+                            <p>
+                                Significa que a persistência
+                                pode ajudar uma pessoa a
+                                superar dificuldades e alcançar
+                                seus objetivos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="ditado">
+
+                        <div class="ditado-numero">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Quem espera sempre alcança.
+                            </h3>
+
+                            <p>
+                                Valoriza a paciência e a
+                                perseverança diante de uma
+                                situação difícil.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="ditado">
+
+                        <div class="ditado-numero">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Mais vale prevenir do que
+                                remediar.
+                            </h3>
+
+                            <p>
+                                Ensina que é melhor tomar
+                                cuidados para evitar um
+                                problema do que lidar com
+                                suas consequências depois.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PARLENDAS
+        ========================= -->
+
+        <section id="parlendas">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        05 — Infância
+                    </small>
+
+                    <h2>
+                        Parlendas
+                    </h2>
+
+                    <p>
+                        Pequenos versos populares
+                        presentes nas brincadeiras
+                        infantis.
+                    </p>
+
+                </div>
+
+
+                <div class="parlendas">
+
+
+                    <article class="parlenda">
+
+                        <small>
+                            PARLENDA 01
+                        </small>
+
+                        <h3>
+                            Uni-duni-tê
+                        </h3>
+
+                        <p>
+                            Uni-duni-tê,<br>
+                            salamê-minguê,<br>
+                            um sorvete colorê,<br>
+                            o escolhido foi você!
+                        </p>
+
+                    </article>
+
+
+                    <article class="parlenda">
+
+                        <small>
+                            PARLENDA 02
+                        </small>
+
+                        <h3>
+                            Hoje é domingo
+                        </h3>
+
+                        <p>
+                            Hoje é domingo,<br>
+                            pede cachimbo.<br>
+                            O cachimbo é de ouro,<br>
+                            bate no touro.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SIMPATIAS
+        ========================= -->
+
+        <section id="simpatias">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        06 — Tradições
+                    </small>
+
+                    <h2>
+                        Simpatias
+                    </h2>
+
+                    <p>
+                        Práticas populares associadas
+                        a desejos, sorte e prosperidade.
+                    </p>
+
+                </div>
+
+
+                <!-- SIMPATIA 01 -->
+
+                <article class="materia">
+
+                    <div class="materia-imagem">
+
+                        <img
+                            src="Simpatias/folha.webp"
+                            alt="Folha de louro"
+                        >
+
+                    </div>
+
+
+                    <div class="materia-texto">
+
+                        <small>
+                            SIMPATIA 01
+                        </small>
+
+                        <h3>
+                            Folha de louro
+                        </h3>
+
+                        <p>
+                            Uma tradição popular consiste
+                            em guardar uma folha de louro
+                            na carteira como símbolo de
+                            prosperidade e abundância.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SIMPATIA 02 -->
+
+                <article class="materia">
+
+                    <div class="materia-imagem">
+
+                        <img
+                            src="Simpatias/roma.jpg"
+                            alt="Romã"
+                        >
+
+                    </div>
+
+
+                    <div class="materia-texto">
+
+                        <small>
+                            SIMPATIA 02
+                        </small>
+
+                        <h3>
+                            Sementes de romã
+                        </h3>
+
+                        <p>
+                            Uma tradição popular de Ano-Novo
+                            consiste em guardar sementes de
+                            romã, associando-as à prosperidade
+                            e à abundância.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SUPERSTIÇÕES
+        ========================= -->
+
+        <section id="supersticoes">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        07 — Crenças populares
+                    </small>
+
+                    <h2>
+                        Superstições
+                    </h2>
+
+                    <p>
+                        Crenças populares que foram
+                        transmitidas entre gerações.
+                    </p>
+
+                </div>
+
+
+                <!-- SUPERSTIÇÃO 01 -->
+
+                <article class="materia">
+
+                    <div class="materia-imagem">
+
+                        <img
+                            src="superstições/passar-embaixo-da-escada.jpg"
+                            alt="Escada"
+                        >
+
+                    </div>
+
+
+                    <div class="materia-texto">
+
+                        <small>
+                            SUPERSTIÇÃO 01
+                        </small>
+
+                        <h3>
+                            Passar debaixo da escada
+                        </h3>
+
+                        <p>
+                            Uma superstição bastante conhecida
+                            afirma que passar debaixo de uma
+                            escada poderia trazer azar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SUPERSTIÇÃO 02 -->
+
+                <article class="materia">
+
+                    <div class="materia-imagem">
+
+                        <img
+                            src="superstições/espelho-quebrado-origem-da-supersticao-e-o-que-fazer-com-os-cacos.jpg"
+                            alt="Espelho"
+                        >
+
+                    </div>
+
+
+                    <div class="materia-texto">
+
+                        <small>
+                            SUPERSTIÇÃO 02
+                        </small>
+
+                        <h3>
+                            Quebrar um espelho
+                        </h3>
+
+                        <p>
+                            Segundo uma crença popular,
+                            quebrar um espelho poderia
+                            trazer anos de azar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CANTIGAS
+        ========================= -->
+
+        <section
+            class="faixa"
+            id="cantigas"
+        >
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <small>
+                        08 — Música popular
+                    </small>
+
+                    <h2>
+                        Cantigas de roda
+                    </h2>
+
+                    <p>
+                        Canções que acompanham brincadeiras
+                        e fazem parte da memória de muitas
+                        gerações.
+                    </p>
+
+                </div>
+
+
+                <div class="cantigas">
+
+
+                    <article class="cantiga">
+
+                        <h3>
+                            Ciranda, cirandinha
+                        </h3>
+
+                        <p>
+                            Ciranda, cirandinha,<br>
+                            vamos todos cirandar,<br>
+                            vamos dar a meia-volta,<br>
+                            volta e meia vamos dar.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cantiga">
+
+                        <h3>
+                            O cravo e a rosa
+                        </h3>
+
+                        <p>
+                            O cravo brigou com a rosa
+                            debaixo de uma sacada.
+                        </p>
+
+                        <br>
+
+                        <p>
+                            Uma cantiga tradicional
+                            presente na cultura infantil
+                            brasileira.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONCLUSÃO
+        ========================= -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="conclusao">
+
+                    <h2>
+                        Conclusão
+                    </h2>
+
+                    <p>
+                        O folclore brasileiro é uma
+                        importante expressão da cultura
+                        popular do país.
+                    </p>
+
+                    <p>
+                        Suas histórias, músicas, brincadeiras,
+                        crenças e costumes mostram a
+                        diversidade das comunidades que
+                        formaram e continuam formando
+                        o Brasil.
+                    </p>
+
+                    <p>
+                        Preservar essas manifestações
+                        significa manter viva a memória
+                        cultural e valorizar os conhecimentos
+                        transmitidos entre gerações.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            <strong>RAÍZES</strong>
+        </p>
+
+        <p>
+            Folclore Brasileiro • Trabalho escolar
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function resposta(numero) {
+
+            const elemento =
+                document.getElementById(
+                    "resposta" + numero
+                );
+
+            if (elemento.style.display === "block") {
+
+                elemento.style.display = "none";
+
+            } else {
+
+                elemento.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
